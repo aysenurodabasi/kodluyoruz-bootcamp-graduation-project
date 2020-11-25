@@ -18,7 +18,7 @@ function App() {
         },
       }
     );
-    console.log(response.data);
+    // console.log(response.data);
   };
   useEffect(() => {
     fetchData();
@@ -27,22 +27,8 @@ function App() {
     <div className="App">
       <Router>
         <div>
-          {/* <ul>
-            <li>
-              <Link exact to="/">
-                <Home />
-              </Link>
-            </li>
-            <li>
-              <Link to="/economy">Ekonomi</Link>
-            </li>
-          </ul> */}
-
-      
           <Switch>
             <Route exact path="/" component={Home}/>
-            {/* <Route path="/news" component={News}/> */}
-            {/* <Route path="/general" component={General}/> */}
             <Route path="/economy" component={Economy}/>
             <Route path="/sport" component={Sport}/>
             <Route path="/technology" component={Sport}/>
