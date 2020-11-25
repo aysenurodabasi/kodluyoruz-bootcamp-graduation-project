@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Ekonomi() {
+function Sport() {
   return (
     <div>
-      
+      sport
     </div>
   )
 }
 
-export default Ekonomi
+export default Sport
