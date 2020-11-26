@@ -13,12 +13,13 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <div className="navbarTitle">Haber Sitesi</div>
+      <div className="navbarTitle" onClick={()=>history.push('/')}>Haber Sitesi</div>
       {/* <div className="navbarTitle" onClick={()=>history.push('general')}>Genel</div> */}
       <div className="navbarTitle" onClick={()=>history.push('economy')}>Ekonomi</div>
       <div className="navbarTitle" onClick={()=>history.push('sport')}>Spor</div>
       <div className="navbarTitle" onClick={()=>history.push('technology')}>Teknoloji</div>
       <div className="navbarTitle" onClick={()=>history.push('magazine')}>Magazin</div>
+      <div className="navbarTitle" onClick={()=>history.push('/cities')}>Şehir Haberleri</div>
     </div>
   )
 }

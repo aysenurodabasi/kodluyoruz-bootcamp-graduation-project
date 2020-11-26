@@ -1,10 +1,11 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import CardList from "../../components/CardList/CardList";
 
 function Economy() {
-  const [economyNews , setEconomyNews ] = useState([]);
+  const [economyNews, setEconomyNews] = useState([]);
 
-  const fetchEconomy = async() =>{
+  const fetchEconomy = async () => {
     let response = await Axios.get(
       "https://api.collectapi.com/news/getNews?country=tr&tag=economy",
       {
@@ -13,29 +14,19 @@ function Economy() {
         },
       }
     );
-    console.log(response.data.result)
-    setEconomyNews(response.data.result)
-  }
+    console.log(response.data.result);
+    setEconomyNews(response.data.result);
+  };
 
   useEffect(() => {
     fetchEconomy();
-  }, [])
+  }, []);
 
   return (
     <div>
-       {
-       economyNews.length>0 && economyNews.map((item,i)=>(
-        <div>
-          <p>{item.description}</p>
-          <p>{item.title}</p>
-        </div>
-        
-       ))
-    }
-    sdfsdf
+      {economyNews.length > 0  ? <CardList data={economyNews}/> : <p>loading...</p>}
     </div>
-   
-  )
+  );
 }
 
-export default Economy
+export default Economy;
