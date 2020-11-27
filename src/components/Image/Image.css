@@ -1,3 +1,10 @@
 .imageContent{
-  padding:30px
+  padding:20px
+}
+
+img{
+  margin-right:20px;
+  border-radius: 5px;
+  width:190px;
+  height:190px;
 }

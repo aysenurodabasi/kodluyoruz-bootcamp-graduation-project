@@ -10,7 +10,7 @@ function Card({ data }) {
           <div>
             <Image data={item.image} />
           </div>
-          <div>
+          <div className="description">
             <h3>
               <a href={item.url}>{item.name}</a>
             </h3>

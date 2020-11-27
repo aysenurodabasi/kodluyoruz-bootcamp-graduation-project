@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <div className="navbarTitle" onClick={()=>history.push('/')}>Haber Sitesi</div>
+      <div className="navbarTitle" onClick={()=>history.push('/')}>Haberler</div>
       {/* <div className="navbarTitle" onClick={()=>history.push('general')}>Genel</div> */}
       <div className="navbarTitle" onClick={()=>history.push('economy')}>Ekonomi</div>
       <div className="navbarTitle" onClick={()=>history.push('sport')}>Spor</div>
