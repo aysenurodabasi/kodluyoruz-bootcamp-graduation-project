@@ -3,10 +3,11 @@ import Axios from "axios";
 import CardList from "../../components/CardList/CardList"
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
-
+import Loading from '../../components/Loading/Loading'
 
 function Home() {
   const [general, setGeneral] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchGeneral = async() => {
     let response = await Axios.get(
@@ -19,6 +20,7 @@ function Home() {
     );
       console.log(response.data.result)
       setGeneral(response.data.result)
+      setLoading(false)
   } 
 
   useEffect(()=>{
@@ -29,7 +31,7 @@ function Home() {
   return (
     <div className="content">
       <Navbar/>
-        {general.length > 0 ? <CardList data={general} /> : <p>loading...</p>}
+        {general.length > 0 ? <CardList data={general} /> : <div className="loadingContent"><Loading loading={loading}/></div>}
       <Footer/>
     </div>
   )

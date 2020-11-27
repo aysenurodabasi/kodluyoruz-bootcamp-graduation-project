@@ -1,11 +1,14 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import CardList from "../../components/CardList/CardList"
+import CardList from "../../components/CardList/CardList";
+import "./Magazine.css";
+import Loading from '../../components/Loading/Loading'
 
 function Magazine() {
   const [magazine, setMagazine] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const fetchMagazine = async() => {
+  const fetchMagazine = async () => {
     let response = await Axios.get(
       "https://api.collectapi.com/news/getNews?country=tr&tag=magazine",
       {
@@ -14,19 +17,25 @@ function Magazine() {
         },
       }
     );
-      console.log(response.data.result)
-      setMagazine(response.data.result)
-  } 
+    console.log(response.data.result);
+    setMagazine(response.data.result);
+  };
 
-  useEffect(()=>{
-    fetchMagazine()
-  },[])
-  
+  useEffect(() => {
+    fetchMagazine();
+  }, []);
+
   return (
     <div>
-      {magazine.length > 0 ? <CardList data={magazine} /> : <p>loading...</p>}
+      {magazine.length > 0 ? (
+        <CardList data={magazine} />
+      ) : (
+        <div className="loadingContent">
+          <Loading loading={loading} />
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default Magazine
+export default Magazine;

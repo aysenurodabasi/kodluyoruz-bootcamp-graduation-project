@@ -1,11 +1,13 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import CardList from "../../components/CardList/CardList"
+import CardList from "../../components/CardList/CardList";
+import Loading from '../../components/Loading/Loading'
 
 function Sport() {
   const [sport, setSport] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const fetchSport = async() => {
+  const fetchSport = async () => {
     let response = await Axios.get(
       "https://api.collectapi.com/news/getNews?country=tr&tag=sport",
       {
@@ -14,19 +16,25 @@ function Sport() {
         },
       }
     );
-      console.log(response.data.result)
-      setSport(response.data.result)
-  } 
+    console.log(response.data.result);
+    setSport(response.data.result);
+  };
 
-  useEffect(()=>{
-    fetchSport()
-  },[])
-  
+  useEffect(() => {
+    fetchSport();
+  }, []);
+
   return (
     <div>
-      {sport.length > 0 ? <CardList data={sport} /> : <p>loading...</p>}
+      {sport.length > 0 ? (
+        <CardList data={sport} />
+      ) : (
+        <div className="loadingContent">
+          <Loading loading={loading} />
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default Sport
+export default Sport;
