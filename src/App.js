@@ -5,7 +5,6 @@ import Home from "./screens/Home/Home";
 import Economy from "./screens/Economy/Economy";
 import Sport from "./screens/Sport/Sport";
 import Magazine from "./screens/Magazine/Magazine";
-import Cities from "./screens/Cities/Cities";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
@@ -25,7 +24,6 @@ function App() {
             <Route path="/sport" component={Sport} />
             <Route path="/technology" component={Technology} />
             <Route path="/magazine" component={Magazine} />
-            <Route path="/cities" component={Cities} />
           </Switch>
         </div>
 

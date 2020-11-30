@@ -1,6 +1,7 @@
 import React from "react";
 import "./Card.css";
-import Image from '../Image/Image'
+import Image from "../Image/Image";
+import Information from "../Information/Information";
 
 function Card({ data }) {
   return (
@@ -11,11 +12,7 @@ function Card({ data }) {
             <Image data={item.image} />
           </div>
           <div className="description">
-            <h3>
-              <a href={item.url}>{item.name}</a>
-            </h3>
-            <p>Kaynak: {item.source}</p>
-            <p>{item.description}</p>
+            <Information information={item} />
           </div>
         </div>
       ))}

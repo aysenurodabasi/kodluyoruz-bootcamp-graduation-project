@@ -17,7 +17,7 @@ function Economy() {
         },
       }
     );
-    console.log(response.data.result);
+    console.log(response);
     setEconomyNews(response.data.result);
     setLoading(false)
 
