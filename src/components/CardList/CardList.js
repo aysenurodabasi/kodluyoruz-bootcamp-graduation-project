@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 function CardList({ data }) {
   return (
     <div className="cardlistContent">
-      <Card data={data} />
+      <Card data={data} role="card"/>
     </div>
   );
 }

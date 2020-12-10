@@ -5,7 +5,7 @@ import Information from "../Information/Information";
 
 function Card({ data }) {
   return (
-    <div classList="cardContent">
+    <div classList="cardContent" id="cardId">
       {data.map((item, i) => (
         <div className="itemContent" key={i}>
           <div>

@@ -17,7 +17,7 @@ function App() {
       <Router>
           <Navbar />
         <div className="content">
-
+    <div>learn react</div>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/economy" component={Economy} />
