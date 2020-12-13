@@ -18,7 +18,7 @@ function Home() {
         },
       }
     );
-      console.log(response.data.result)
+      //console.log(response.data.result)
       setGeneral(response.data.result)
       setLoading(false)
   } 

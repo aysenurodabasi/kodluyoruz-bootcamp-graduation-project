@@ -15,6 +15,7 @@ function Navbar() {
       <div className="navbarTitle" onClick={()=>history.push('sport')}>Spor</div>
       <div className="navbarTitle" onClick={()=>history.push('technology')}>Teknoloji</div>
       <div className="navbarTitle" onClick={()=>history.push('magazine')}>Magazin</div>
+      <div className="navbarTitle" onClick={()=>history.push('contact')}>İletişim</div>
     </div>
   )
 }

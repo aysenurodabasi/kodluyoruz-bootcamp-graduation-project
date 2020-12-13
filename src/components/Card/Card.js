@@ -5,18 +5,14 @@ import Information from "../Information/Information";
 
 function Card({ data }) {
   return (
-    <div classList="cardContent" id="cardId">
-      {data.map((item, i) => (
-        <div className="itemContent" key={i}>
+        <div className="itemContent">
           <div>
-            <Image data={item.image} />
+            <Image data={data.image} />
           </div>
           <div className="description">
-            <Information information={item} />
+            <Information information={data} />
           </div>
         </div>
-      ))}
-    </div>
   );
 }
 

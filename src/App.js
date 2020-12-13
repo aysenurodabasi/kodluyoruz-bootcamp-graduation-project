@@ -5,6 +5,7 @@ import Home from "./screens/Home/Home";
 import Economy from "./screens/Economy/Economy";
 import Sport from "./screens/Sport/Sport";
 import Magazine from "./screens/Magazine/Magazine";
+import Contact from "./screens/Contact/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
@@ -17,13 +18,13 @@ function App() {
       <Router>
           <Navbar />
         <div className="content">
-    <div>learn react</div>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/economy" component={Economy} />
             <Route path="/sport" component={Sport} />
             <Route path="/technology" component={Technology} />
             <Route path="/magazine" component={Magazine} />
+            <Route path="/contact" component={Contact} />
           </Switch>
         </div>
 

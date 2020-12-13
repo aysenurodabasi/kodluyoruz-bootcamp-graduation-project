@@ -17,7 +17,7 @@ function Magazine() {
         },
       }
     );
-    console.log(response.data.result);
+    //console.log(response.data.result);
     setMagazine(response.data.result);
   };
 
@@ -27,13 +27,7 @@ function Magazine() {
 
   return (
     <div>
-      {magazine.length > 0 ? (
-        <CardList data={magazine} />
-      ) : (
-        <div className="loadingContent">
-          <Loading loading={loading} />
-        </div>
-      )}
+      {magazine.length > 0  ? <CardList data={magazine}/> : <div className="loadingContent"><Loading loading={loading}/></div>}
     </div>
   );
 }

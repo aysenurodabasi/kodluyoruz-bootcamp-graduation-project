@@ -16,7 +16,7 @@ function Sport() {
         },
       }
     );
-    console.log(response.data.result);
+    //console.log(response.data.result);
     setSport(response.data.result);
   };
 

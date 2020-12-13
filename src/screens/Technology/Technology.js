@@ -16,7 +16,7 @@ function Technology() {
         },
       }
     );
-    console.log(response.data.result);
+    //console.log(response.data.result);
     setTechnology(response.data.result);
     setLoading(false);
   };

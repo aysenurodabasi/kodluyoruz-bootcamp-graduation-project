@@ -5,7 +5,9 @@ import Card from "../Card/Card";
 function CardList({ data }) {
   return (
     <div className="cardlistContent">
-      <Card data={data} role="card"/>
+       {data.map((item, i) => (
+        <Card data={item}/>
+      ))}
     </div>
   );
 }
