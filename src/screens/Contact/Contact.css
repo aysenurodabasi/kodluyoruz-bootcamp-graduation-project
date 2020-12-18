@@ -3,6 +3,7 @@
     height:100vh;
     flex-direction: column;
     align-items: center;
+    margin-top: 200px;
 }
 
 .row{
@@ -24,4 +25,8 @@ textarea{
     border-radius: 5px;
     border:none;
     margin-bottom:30px;
+}
+
+#alert{
+    margin-top:30px
 }

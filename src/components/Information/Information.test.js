@@ -20,9 +20,9 @@ describe('info', () => {
         const {container}=render(<FakeInfo/>)
 
         const link = container.querySelector('a');
-        const infoName = container.querySelector('h3');
+        const infoName = container.querySelector('h5');
         const source = container.querySelector('p');
-        const description = container.querySelector('h5');
+        const description = container.querySelector('h3');
         expect(link.href).toBe("https://www.hurriyet.com.tr/ekonomi/son-dakika-kritik-toplanti-sonrasi-iletisim-baskanligindan-aciklama-41678167")
         expect(source).toHaveTextContent("Hürriyet Ekonomi")
         expect(infoName).toHaveTextContent("Son dakika... Kritik toplantı sonrası İletişim Başkanlığı'ndan açıklama")

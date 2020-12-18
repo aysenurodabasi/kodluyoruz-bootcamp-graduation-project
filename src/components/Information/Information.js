@@ -4,11 +4,11 @@ function Information({ information }) {
   console.log(information)
   return (
     <div>
-      <h3>
+      <h5>
         <a href={information.url}>{information.name}</a>
-      </h3>
+      </h5>
       <p>Kaynak: {information.source}</p>
-      <h5>{information.description}</h5>
+      <h3>{information.description}</h3>
     </div>
   )
 }

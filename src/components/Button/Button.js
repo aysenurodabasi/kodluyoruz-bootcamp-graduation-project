@@ -1,10 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Button.css'
 
-const Button = ({onClick}) =>{
+const Button = ({onClick,role}) =>{
     return (
         <div>
-            <button onClick={onClick}> Gönder </button>
+            <button role={role} onClick={onClick}> Gönder </button>
         </div>
     )
 }

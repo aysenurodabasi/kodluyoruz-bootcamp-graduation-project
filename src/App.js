@@ -17,7 +17,6 @@ function App() {
     <div className="App">
       <Router>
           <Navbar />
-        <div className="content">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/economy" component={Economy} />
@@ -26,11 +25,7 @@ function App() {
             <Route path="/magazine" component={Magazine} />
             <Route path="/contact" component={Contact} />
           </Switch>
-        </div>
-
           <Footer />
-
-          
       </Router>
     </div>
   );
